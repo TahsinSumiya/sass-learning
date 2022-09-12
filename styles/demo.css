@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Combo", cursive;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  text-decoration: underline;
+}
+
+#learn p {
+  font-size: 3rem;
+  margin: 10px 0;
+  text-align: justify;
+  color: rgb(63, 163, 213);
+}
+
+h1 {
+  background: rgb(113, 113, 209);
+}
+
+h3 {
+  background: rgb(138, 53, 177);
+}
+
+main {
+  background: rgb(224, 140, 240);
+  font-size: 2rem;
+}
+main h2 {
+  color: rgb(206, 75, 28);
+}
+main p {
+  color: rgb(216, 216, 33);
+}
+
+footer {
+  background: rgb(240, 140, 160);
+}
+
+.btn, .btn_less, .btn_more {
+  text-align: center;
+  padding: 15px 30px;
+  cursor: pointer;
+  background-color: rgb(42, 140, 182);
+  font-size: 18px;
+}
+
+.btn_less {
+  background-color: rgb(41, 160, 121);
+}
+
+[class*=col-] {
+  float: left;
+}
+
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}/*# sourceMappingURL=demo.css.map */

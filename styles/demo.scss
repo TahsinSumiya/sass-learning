@@ -1,0 +1,115 @@
+
+@forward "./base/index.scss";
+@use "./page/index" as variable;
+
+$header-bgcolor : rgb(113, 113, 209);
+$main-bgcolor : rgb(224, 140, 240);
+$footer-bgcolor : rgb(240, 140, 160);
+$main-fonstSize : 2rem;
+
+$colors: (
+  color1: red,
+  color2: green,
+  color3: blue,
+);
+
+@each $key, $color in $colors {
+  .#{$color}-text {
+    color: $color;
+  }
+}
+@mixin fontsize($value){
+
+
+@if $value == small{
+    font-size: 12px;
+}
+@else if $value == medium{
+    font-size: 18px;
+}
+@else{
+    font-size:22px ;
+}
+
+}
+@mixin para_style($size,$style) {
+    font-size:$size;
+    margin: 10px 0;
+    text-align: justify;
+    color: $style;
+}
+#learn p{
+    @include para_style(3rem,rgb(63, 163, 213));
+}
+h1{
+    background:$header-bgcolor;
+}
+h3{
+    background:variable.$header-color ;
+}
+main{
+    background:$main-bgcolor;
+    font-size:$main-fonstSize ;
+    h2{
+        color: rgb(206, 75, 28);
+    }
+    p{
+        color: rgb(216, 216, 33);
+    }
+}
+footer{
+    background:$footer-bgcolor;
+}
+
+
+.btn{
+    text-align: center;
+    padding: 15px 30px;
+    cursor: pointer;
+    background-color: rgb(42, 140, 182);
+    @include fontsize(medium)
+}
+.btn_more{
+ @extend .btn;
+}
+.btn_less{
+    @extend .btn;
+    background-color: rgb(41, 160, 121);
+   }
+
+
+// css
+[class *= "col-"]{
+    float: left;
+}
+// .col-1 {width: 8.33%;}
+// .col-2 {width: 16.66%;}
+// .col-3 {width: 25%;}
+// .col-4 {width: 33.33%;}
+// .col-5 {width: 41.66%;}
+// .col-6 {width: 50%;}
+// .col-7 {width: 58.33%;}
+// .col-8 {width: 66.66%;}
+// .col-9 {width: 75%;}
+// .col-10 {width: 83.33%;}
+// .col-11 {width: 91.66%;}
+// .col-12 {width: 100%;}
+// .row::after{
+//     clear: both;
+//     content: "";
+//     display: table;
+// }
+
+// if 12 in for loop
+//    to 1-11
+//    through 1-12
+
+// @for $i from 1 through 12{
+//     .col-#{$i} {width:100% /12 * $i}
+// }
+@while $i <13{
+    .col-#{$i}{
+        width:100% /12 * $i
+    }
+    $i:$i+1 
+}
